@@ -1,0 +1,10 @@
+dist
+Dockerfile
+*.md
+*.json
+**/node_modules
+.*
+uploads
+yarn.lock
+.babelrc
+flow-typed/
