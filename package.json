@@ -1,0 +1,8 @@
+{
+  "name": "json-node-finder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/camilosegura/json-node-finder.git",
+  "author": "Camilo Segura <camilosegurar@gmail.com>",
+  "license": "MIT"
+}
