@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const getNodes = gql`
+const queryNodes = gql`
   query {
     nodes {
       id
@@ -17,4 +17,4 @@ const getNodes = gql`
   }
 `;
 
-export default getNodes;
+export default queryNodes;
