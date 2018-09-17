@@ -18,4 +18,9 @@ module.exports = {
     ],
   },
   plugins: [htmlPlugin],
+  devServer: {
+    proxy: {
+      '/graphql': 'http://localhost:3000',
+    },
+  },
 };

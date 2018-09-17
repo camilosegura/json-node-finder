@@ -7,9 +7,11 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "webpack-dev-server --config webpack/webpack.config.js  --mode development --open --hot",
-    "build": "webpack --mode production",
-    "lint": "eslint ./"
+    "webpack-server": "webpack-dev-server --config webpack/webpack.config.js  --mode development --open --hot",
+    "dev": "yarn webpack-server && concurrently --kill-others \"yarn express-server\"",
+    "build": "webpack --config webpack/webpack.config.js --mode production",
+    "lint": "eslint ./",
+    "express-server": "nodemon --ignore src/ --ignore dist/ ./bin/www"
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
@@ -23,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.4",
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
@@ -36,8 +39,10 @@
     "graphql": "^14.0.2",
     "graphql-server-express": "^1.4.0",
     "graphql-tag": "^2.9.2",
+    "graphql-tools": "^3.1.1",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
+    "lodash": "^4.17.11",
     "morgan": "~1.9.0",
     "react": "^16.5.1",
     "react-apollo": "^2.1.11",
